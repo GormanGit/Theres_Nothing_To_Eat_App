@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // const urlComponent = "https://lh3.googleusercontent.com/";
-import { addToFavorite } from "../actions";
+import { addToFavorite, removeFromFavorite } from "../actions";
 import { connect } from 'react-redux'
 
 class RecipeItems extends Component {
@@ -17,6 +17,11 @@ class RecipeItems extends Component {
     this.props.addToFavorite(this.props.recipes);
   }
 
+  removeFromFavorite(){
+    this.setState({favorited: !this.state.favorited});
+    this.props.removeFromFavorite(this.props.recipes)
+  }
+
   displayFav(){
     if(!this.state.favorited){
       return <span className="glyphicon glyphicon-unchecked"
@@ -24,7 +29,8 @@ class RecipeItems extends Component {
       ></span>
     } else{
       return <span className="glyphicon glyphicon-check"
-     onClick={()=>this.setState({favorited: !this.state.favorited})}
+        onClick={()=>this.removeFromFavorite()}
+     // onClick={()=>this.setState({favorited: !this.state.favorited})}
       ></span>
     }
   }
@@ -50,4 +56,4 @@ class RecipeItems extends Component {
 }
 
 //all that is needed here is a function so the first parameter will be null as state properties is not needed
-export default connect(null, { addToFavorite })(RecipeItems);
+export default connect(null, { addToFavorite, removeFromFavorite })(RecipeItems);

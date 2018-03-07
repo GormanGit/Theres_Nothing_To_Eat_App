@@ -1,6 +1,6 @@
 export const RECIPES = "RECIPES";
 export const ADD_FAV = "ADD_FAV";
-
+export const REMOVE_FAV ="REMOVE_FAV";
 
 export function recipes(items) {
   const action = {
@@ -13,6 +13,13 @@ export function recipes(items) {
 export function addToFavorite(recipes){
   return{
     type: ADD_FAV,
+    recipes
+  }
+}
+
+export function removeFromFavorite(recipes){
+  return {
+    REMOVE_FAV,
     recipes
   }
 }

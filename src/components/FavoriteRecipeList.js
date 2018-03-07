@@ -11,7 +11,7 @@ class FavoriteRecipeList extends Component{
       <div>
       <h4>My Favorite Recipes</h4>
     {this.props.favorites.map(recipes =>{
-      return <RecipeItems recipes={recipes} />
+      return <RecipeItems recipes={recipes} key={recipes.recipe.image}/>
     })}
      </div>
     )

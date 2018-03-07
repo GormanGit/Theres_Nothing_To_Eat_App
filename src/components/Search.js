@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import  { Form, FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap';
 import { API_KEY } from '../secrets';
-import { APP_ID } from '../secrets'
+import { APP_ID } from '../secrets';
 //add the action to the search
 import { recipes } from '../actions';
 import { connect } from 'react-redux';
@@ -14,7 +14,8 @@ class Search extends Component {
     super(props);
 
     this.state = {
-      query: ''
+      query: [],
+      buttons: []
     };
   }
 
@@ -34,6 +35,26 @@ class Search extends Component {
   }
   render(){
     return (<div>
+      <div className="col-md-6 col-md-offset-3">
+        <button type="button" className="btn btn-primary" onClick={()=> this.state.buttons.push(", low-carb")}>Low-Carb</button>
+
+        <button type="button" className="btn btn-primary" onClick={()=> this.state.buttons.push(", Sea-Food")}>Sea-Food</button>
+        <button type="button" className="btn btn-primary" onClick={()=> this.state.buttons.push(", Ketogentic")}>Ketogentic</button>
+        <button type="button" className="btn btn-primary" onClick={()=> this.state.buttons.push(", Vegetarian")}>Vegetarian</button>
+        <button type="button" className="btn btn-primary" onClick={()=> this.state.buttons.push(", Vegan")}>Vegan</button>
+        <button type="button" className="btn btn-primary" onClick={()=> this.state.buttons.push(", Raw")}>Raw</button>
+        <button type="button" className="btn btn-primary" onClick={()=> this.state.buttons.push(", Paleo")}>Paleo</button>
+      </div>
+
+      <div className="col-md-12 col-md-offset-3">
+        <button type="button" className="btn btn-" onClick={()=> this.state.buttons.push("+ Indian")}>Indian</button>
+        <button type="button" className="btn btn-" onClick={()=> this.state.buttons.push("+ Asian")}>Asian</button>
+        <button type="button" className="btn btn-" onClick={()=> this.state.buttons.push("+ American")}>American</button>
+        <button type="button" className="btn btn-" onClick={()=> this.state.buttons.push("+ Mexican")}>Mexican</button>
+        <button type="button" className="btn btn-" onClick={()=> this.state.buttons.push("+ Italian")}>Italian</button>
+        <button type="button" className="btn btn-" onClick={()=> this.state.buttons.push("+ French")}>French</button>
+        <button type="button" className="btn btn-" onClick={()=> this.state.buttons.push("+ Middle Eastern")}>Middle Eastern</button>
+      </div>
       <Form inline className="col-md-6 col-md-offset-4">
         <FormGroup>
           <ControlLabel>Search</ControlLabel>
@@ -43,7 +64,9 @@ class Search extends Component {
             //in react if we need any data we can use onChange
             //event means onChange event, target is the field "FormControl", and value of that field. must pass in
             //the event with {(event)...So now console.log(this.state.query) and it will return the input value! :) see line 15
-          onChange={(event)=>this.setState({query: event.target.value})}
+          onChange={(event)=>this.setState({query: event.target.value + this.state.buttons})}
+
+
           />
           {' '}
           <Button bsStyle="success"
