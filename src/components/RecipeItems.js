@@ -45,8 +45,8 @@ class RecipeItems extends Component {
 
             <div className="caption">
               <h3>{this.props.recipes.recipe.label}</h3>
-              <p>Health Label-{this.props.recipes.recipe.healthLabels}</p>
-              <h4>Lets Cook this! {this.displayFav()}</h4>
+              <a target ="_blank" href = {this.props.recipes.recipe.url}>Recipe</a>
+              <h4>{this.props.showButton ? this.displayFav() : null}</h4>
             </div>
           </div>
         </div>

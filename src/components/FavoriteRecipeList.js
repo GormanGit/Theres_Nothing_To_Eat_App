@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RecipeItems from './RecipeItems'
+import { Link } from 'react-router-dom';
+import "../App.css";
 
 
 class FavoriteRecipeList extends Component{
@@ -9,11 +11,18 @@ class FavoriteRecipeList extends Component{
     return (
       //map over the favorites and render the RecipeItems that are returned in a seperate div
       <div>
-      <h4>My Favorite Recipes</h4>
+
+        <li id="list"><Link to="/">Home</Link></li>
+        <li id="list"><Link to ="/AppList">Shopping List</Link></li>
+
+      <h4>My Latest Recipes</h4>
     {this.props.favorites.map(recipes =>{
-      return <RecipeItems recipes={recipes} key={recipes.recipe.image}/>
+      return <RecipeItems recipes={recipes} key={recipes.recipe.image} showButton={false}/>
     })}
+
      </div>
+
+
     )
   }
 }

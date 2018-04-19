@@ -1,12 +1,14 @@
 import recipes from './recipe_reducer';
 import { combineReducers } from 'redux';
-import  favorites  from './fav_reducer'
+import  favorites  from './fav_reducer';
+import reminders from './list_reducers';
 
 
 
 const rootReducer =  combineReducers({
   recipes,
-  favorites
+  favorites,
+  reminders
 });
 
 export default rootReducer;

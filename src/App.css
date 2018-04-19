@@ -8,3 +8,7 @@
     /*-webkit-background-size: cover;*/
     /*background-size: 3%;*/
 }
+
+#list {
+    list-style-type: none;
+}

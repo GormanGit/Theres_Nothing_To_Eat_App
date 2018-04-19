@@ -9,7 +9,8 @@ function addToFavorite(state = [], action) {
       let favoriteRecipe = [...state, action.recipes]
       return favoriteRecipe;
     case REMOVE_FAV:
-       favoriteRecipe = state.filter(item=> item.image !== action.recipes.image);
+      //this needs to get into the array specifically targeting differences ie. the urls, something that is unique to each recipe.
+        favoriteRecipe = state.filter(item => item.recipe.url !== action.recipes.recipe.url);
       return favoriteRecipe;
     default:
       return state;
