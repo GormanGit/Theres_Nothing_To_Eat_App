@@ -71,11 +71,11 @@ class Search extends Component {
             {' '}
             <Button id="searchButton" className="glyphicon glyphicon-cutlery" bsStyle="success"
                     onClick={()=> this.search()}></Button>
-            <br/>
+
           </FormGroup>
         </Form>
 
-        <br/>
+        {/*<br/>*/}
 
       </div>)
 

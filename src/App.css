@@ -79,8 +79,11 @@
     border-color: #9A3014;
     color: black;
 }
-
+#container{
+    width: 100% !important;
+}
 #navBar{
+    width: 100% !important;
     /*background-color: #7FA78C;*/
 }
 #boxShade{

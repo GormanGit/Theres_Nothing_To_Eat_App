@@ -19,8 +19,9 @@ class RecipeResults extends Component {
         </div>
         <Search />
         <br/>
+        <br/>
 
-        <li style={{ display: "flex", justifyContent: "center", marginRight: "3%", fontSize: "18px"}} id="list"><Link style={{color: "#9A3014"}} to="/fav">Start Cooking</Link></li>
+        <li style={{ display: "flex", justifyContent: "center", marginRight: "0%", fontSize: "18px"}} id="list"><Link style={{color: "#9A3014"}} to="/fav">Start Cooking</Link></li>
         {this.props.recipes.map(item => {
           return <RecipeItems recipes={item} key={item.recipe.label} showButton={true} />
 

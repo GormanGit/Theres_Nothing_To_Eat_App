@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import RecipeResults from './RecipeResults'
 import "../App.css";
+import topNavBar  from "./topNavBar";
 import FavoriteRecipeList from "../components/FavoriteRecipeList";
 import AppList from "./AppList";
+
+import { Navbar, Nav, NavItem, Button, MenuItem, NavDropdown } from "react-bootstrap";
+
 
 
 import {
@@ -16,9 +20,13 @@ import {
 class App extends Component {
   render() {
     return (
+
       <div className="container" >
       <div className="row text-center" >
-      <div >
+      <div>
+          {topNavBar()}
+
+      <div>
       <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
     <h2 id="signUpSignIn"></h2>
       </div>
@@ -40,7 +48,7 @@ class App extends Component {
     {/*/!*<RecipeResults />*!/*/}
     {/*</div>*/}
   </div>
-
+</div>
   );
   }
 }

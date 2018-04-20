@@ -11,9 +11,6 @@ class FavoriteRecipeList extends Component{
     return (
       //map over the favorites and render the RecipeItems that are returned in a seperate div
       <div>
-
-
-
         <h4 id="listSignIn" >My Latest Recipes</h4>
         {this.props.favorites.map(recipes =>{
           return <RecipeItems style={{position: "fixed"}} recipes={recipes} key={recipes.recipe.image} showButton={false}/>
