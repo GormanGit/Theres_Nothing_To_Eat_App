@@ -4,8 +4,9 @@ import "../App.css";
 import topNavBar  from "./topNavBar";
 import FavoriteRecipeList from "../components/FavoriteRecipeList";
 import AppList from "./AppList";
+import Search from "./Search";
+import LandingPage from "./LandingPage"
 
-import { Navbar, Nav, NavItem, Button, MenuItem, NavDropdown } from "react-bootstrap";
 
 
 
@@ -27,17 +28,17 @@ class App extends Component {
           {topNavBar()}
 
       <div>
-      <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
-    <h2 id="signUpSignIn"></h2>
+      {/*<h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>*/}
       </div>
-      < br/>
+      {/*< br/>*/}
       </div>
       <div className="row">
       <Router>
       <Switch>
-      <Route path="/" exact component={ RecipeResults } />
-    <Route path="/fav" exact component={ FavoriteRecipeList } />
-    <Route style={{height: "auto"}} path="/AppList" exact component={ AppList } />
+      <Route path="/" exact component={ LandingPage } />
+      <Route path="/search" exact component={ RecipeResults } />
+      <Route path="/fav" exact component={ FavoriteRecipeList } />
+      <Route style={{height: "auto"}} path="/AppList" exact component={ AppList } />
     </Switch>
     </Router>
     </div>

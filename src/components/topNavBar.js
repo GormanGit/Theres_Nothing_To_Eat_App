@@ -1,41 +1,65 @@
 import React, { Component } from 'react';
-
 import { Navbar, Nav, NavItem, Button, MenuItem, NavDropdown } from "react-bootstrap";
 import "../App.css";
+import { Popover, OverlayTrigger } from "react-bootstrap"
+// import { Link } from "react-router-dom"
+
+
 
 
 const topNavBar = () => {
+  const popoverBottom = (
+    <Popover id="popover-positioned-bottom" title="Using this app">
+      <strong>Step 1.)</strong> Put ingredients in the search box separated by a comma.
+      <br/>
+      <i><strong>Hint..</strong> Ideally, ingredients listed should be something that has been lingering in the cupboard for a long time.</i>
+      <br/>
+      <strong>Step 2.)</strong> Select a Diet and Cuisine if you have something in mind.
+      <br/>
+      <strong>Step 3.)</strong> Click the check box of the recipe you like.
+      <br/>
+      <strong>Step 4.)</strong> Click "Start Cooking" link.
+      <br/>
+      <strong>Step 5.)</strong> Click "Shopping List" link.
+      <br/>
+      <strong>Step 6.)</strong> When your ready to start cooking click the "Recipe" link for preparation instructions.
+      <br/>
+      <strong>Step 7.)</strong> Enjoy!
+
+    </Popover>
+  );
   return(
     <div>
       <Navbar className="navBar" style={{borderBottomColor: "#9A3014", borderRightColor: "#9A3014", borderLeftColor: "#9A3014",backgroundColor: "#C6CBCC", width: "100%"}} collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#brand">React-Bootstrap</a>
+
+            {/*<a className="fab fa-github" style={{size: "4x"}}></a>*/}
+
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#">
-              Link
+            <NavItem eventKey={1} href="/search">
+              <a style={{color: "#777777"}} >Home</a>
             </NavItem>
             <NavItem eventKey={2} href="#">
-              Link
+              About
             </NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.3}>Separated link</MenuItem>
-            </NavDropdown>
+            {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">*/}
+              {/*<MenuItem eventKey={3.1}>Action</MenuItem>*/}
+              {/*<MenuItem eventKey={3.2}>Another action</MenuItem>*/}
+              {/*<MenuItem eventKey={3.3}>Something else here</MenuItem>*/}
+              {/*<MenuItem divider />*/}
+              {/*<MenuItem eventKey={3.3}>Separated link</MenuItem>*/}
+            {/*</NavDropdown>*/}
           </Nav>
           <Nav pullRight>
-            <NavItem eventKey={1} href="#">
-              Link Right
-            </NavItem>
-            <NavItem eventKey={2} href="#">
-              Link Right
+            <OverlayTrigger eventKey={1} trigger="click" placement="bottom" href="" overlay={popoverBottom}>
+              <NavItem>Instructions</NavItem>
+            </OverlayTrigger>
+            <NavItem >
             </NavItem>
           </Nav>
         </Navbar.Collapse>

@@ -24,7 +24,7 @@ class Search extends Component {
 
   search() {
     console.log('search button clicked', this.state.query);
-    let url = `https://api.edamam.com/search?_app_id=c25b1417&_app_key=b66ddcba681839a1d252f9822481af5b&q=${this.state.query}`
+    let url = `https://api.edamam.com/search?_app_id=c25b1417&_app_key=b66ddcba681839a1d252f9822481af5b&to=50&q=${this.state.query}`
     fetch(url, {
       method: 'GET'
     }).then(response => response.json())
@@ -34,6 +34,8 @@ class Search extends Component {
   render(){
     return (
       <div>
+        <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
+
         <Form inline className="col-md-6 col-md-offset-3">
           <DropdownButton id="dropMenu" title="Diet" className="buttonColor"
           >

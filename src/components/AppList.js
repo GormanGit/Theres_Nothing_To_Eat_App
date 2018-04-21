@@ -46,7 +46,7 @@ class AppList extends Component {
     let reminderDivs = reminders.recipe.ingredients.map(reminder => {
       return (
 
-        <li key={reminder.id} className="list-group-item">
+        <li key={reminder.id} className="list-group-item" style={{fontSize: "17px"}}>
 
           <div >{ reminder.text
             // || reminder.num || this.state
@@ -71,7 +71,7 @@ class AppList extends Component {
     });
     console.log(reminderDivs);
     return (
-      <ul id="listSignIn" style={{left: "30%", width: "300",text: "1em", color: "black", fontSize: "18"}} className="list-group col-sm-4">
+      <ul id="listSignIn" style={{left: "34%", width: "300",text: "1em", color: "black", fontSize: "18"}} className="list-group col-sm-4">
         {reminderDivs}
 
       </ul>
@@ -82,21 +82,23 @@ class AppList extends Component {
     // console.log('this.props', this.props);
     return (
       <div className="App">
+        <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
+
         <div className="title" id="listSignIn" style={{fontSize: "25px"}}>
           Ingredients List!
-          <div style={{ fontSize: "18px", left: "38%"}} id="list"><Link style={{color: "#9A3014"}} to="/">Home</Link></div>
-          <div style={{ fontSize: "18px", left: "38%"}} id="list"><a style={{color: "#9A3014"}} href="https://www.google.com/maps/search/grocery+store+near+me" target="_blank">Store</a></div>
+          {/*<div style={{ fontSize: "18px", left: "38%"}} id="list"><Link style={{color: "#9A3014"}} to="/">Home</Link></div>*/}
+          {/*<div style={{ fontSize: "18px", left: "38%"}} id="list"><a style={{color: "#9A3014"}} href="https://www.google.com/maps/search/grocery+store+near+me" target="_blank">Store</a></div>*/}
           <div style={{ fontSize: "18px", left: "38%"}} id="list"><a style={{color: "#9A3014"}} href="https://www.google.com/maps/search/food+trailer+near+me" target="_blank">Just give me a Taco!</a></div>
 
         </div>
-        <div className="form-inline reminder-form">
-          <div className="form-group">
-            <input
-              className="form-control"
-              placeholder="Oh yeah, I need..."
-              onChange={event => this.setState({text: event.target.value })}
-            />
-          </div>
+        {/*<div className="form-inline reminder-form">*/}
+          {/*<div className="form-group">*/}
+            {/*<input*/}
+              {/*className="form-control"*/}
+              {/*placeholder="Oh yeah, I need..."*/}
+              {/*onChange={event => this.setState({text: event.target.value })}*/}
+            {/*/>*/}
+          {/*</div>*/}
           {' '}
 
           {/*<button*/}
@@ -104,9 +106,10 @@ class AppList extends Component {
           {/*className="btn btn-success"*/}
           {/*onClick={() => this.addReminder()}*/}
           {/*>Add Reminder</button>*/}
-          <Button id="searchButton" className="glyphicon glyphicon-cutlery" bsStyle="success"
-          ></Button>
-        </div>
+
+          {/*<Button id="searchButton" className="glyphicon glyphicon-cutlery" bsStyle="success"*/}
+          {/*></Button>*/}
+        {/*</div>*/}
 
         <br/>
         {this.renderReminders()}
