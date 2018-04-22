@@ -1,5 +1,6 @@
 .body{
     display: flex;
+    height: 5000px;
 }
 .App {
     text-align: center;
@@ -52,6 +53,7 @@
 }
 #listSignIn{
     font-family: 'Playfair Display', serif;
+    color: black ;
 
 }
 
@@ -96,4 +98,13 @@
 /*font-family: 'Uncial Antiqua', cursive;*/
 /*font-family: 'Londrina Shadow', cursive;*/
 /*$cardBorderWidth: 3px;*/
-
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    margin-bottom: 0;
+    width: 100%;
+    /*background-color: red;*/
+    /*color: white;*/
+    text-align: center;
+}

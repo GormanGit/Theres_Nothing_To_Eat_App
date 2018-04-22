@@ -4,7 +4,8 @@ import "../App.css";
 import topNavBar from "./topNavBar";
 import FavoriteRecipeList from "../components/FavoriteRecipeList";
 import AppList from "./AppList";
-import LandingPage from "./LandingPage"
+import LandingPage from "./LandingPage";
+import Footer from "./Footer";
 
 import {
   BrowserRouter as Router,
@@ -15,7 +16,7 @@ import {
 class App extends Component {
   render() {
     return (
-
+      <div>
       <div className="container">
         <div className="row text-center">
           <div>
@@ -36,6 +37,11 @@ class App extends Component {
           <div className="row" align="center">
           </div>
         </div>
+      </div>
+
+      <div>
+        {Footer()}
+      </div>
       </div>
     );
   }

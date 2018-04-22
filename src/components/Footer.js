@@ -5,7 +5,7 @@ import {Popover, OverlayTrigger} from "react-bootstrap"
 // import { Link } from "react-router-dom"
 
 
-const topNavBar = () => {
+const Footer = () => {
   const popoverBottom = (
     <Popover id="popover-positioned-bottom" title="Using this app">
       <strong>Step 1.)</strong> Put ingredients in the search box separated by a comma.
@@ -29,33 +29,38 @@ const topNavBar = () => {
   );
   return (
     <div>
-      <Navbar id="listSignIn" style={{
-        borderBottomColor: "#9A3014",
+      <Navbar className="footer" style={{
+        display: "flex",
+        borderTopColor: "#9A3014",
         borderRightColor: "#9A3014",
         borderLeftColor: "#9A3014",
         backgroundColor: "#C6CBCC",
         width: "100%",
-        fontSize: "16px"
+
       }} collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            {/*<a className="fab fa-github" style={{size: "4x"}}></a>*/}
+        <Navbar.Header  style={{marginLeft: "48%", marginBottom: "5px"}}>
+          <Navbar.Brand >
+            <a href={"https://www.github.com/"}><img style={{ height: "2em"}} src="http://www.iconninja.com/files/587/807/788/mark-octocat-fork-github-icon.svg" /></a>
+            {/*<a href={"https://www.github.com/"}><img style={{ height: "2em"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqttnupIvCvZBrmr6AFmx8J697qnLUZm2smzxE_znkTcnCsiMG" /></a>*/}
+
+            {/*<img style={{ height: "4em"}} src="http://www.iconninja.com/files/587/807/788/mark-octocat-fork-github-icon.svg" />*/}
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem  id="listSignIn" href="/search"> Home
+            <NavItem eventKey={1} href="/search" style={{color: "#777777"}}>
+              {/*Home*/}
               {/*<a style={{color: "#777777"}}> Home </a>*/}
             </NavItem>
-            <NavItem id="listSignIn">
-              About
+            <NavItem eventKey={2} href="#">
+              {/*About*/}
             </NavItem>
           </Nav>
           <Nav pullRight>
-            <OverlayTrigger eventKey={1} trigger="click" placement="bottom" href="" overlay={popoverBottom}>
-              <NavItem id="listSignIn"> Instructions</NavItem>
-            </OverlayTrigger>
+            {/*<OverlayTrigger eventKey={1} trigger="click" placement="bottom" href="" overlay={popoverBottom}>*/}
+              {/*<NavItem>Instructions</NavItem>*/}
+            {/*</OverlayTrigger>*/}
             <NavItem>
             </NavItem>
           </Nav>
@@ -64,4 +69,4 @@ const topNavBar = () => {
     </div>
   )
 }
-export default topNavBar;
+export default Footer;
