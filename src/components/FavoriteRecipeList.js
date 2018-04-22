@@ -7,7 +7,7 @@ import "../App.css";
 
 class FavoriteRecipeList extends Component {
   render() {
-    console.log(this.props.favorites)
+    // console.log(this.props.favorites)
     return (
 
       //map over the favorites and render the RecipeItems that are returned in a seperate div

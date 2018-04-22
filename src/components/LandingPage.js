@@ -5,7 +5,6 @@ import {Button} from "react-bootstrap"
 
 const LandingPage = () => {
 
-
   return (
     <div>
       <h2 id="list">

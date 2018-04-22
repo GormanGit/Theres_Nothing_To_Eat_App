@@ -37,7 +37,7 @@ class RecipeItems extends Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
 
       <div id="boxShade" style={{marginTop: "20px"}} className="col-md-12 col-md-4">

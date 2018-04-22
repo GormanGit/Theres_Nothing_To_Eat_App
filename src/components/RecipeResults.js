@@ -27,7 +27,7 @@ class RecipeResults extends Component {
 
 //access the data in the RECIPE
 function mapStateToProps(state) {
-  console.log(state);
+  // console.log(state);
   return {
     recipes: state.recipes
   }
