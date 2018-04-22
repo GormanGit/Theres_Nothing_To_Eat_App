@@ -34,7 +34,7 @@ class AppList extends Component {
 
   renderReminders() {
     let reminders = this.props.reminders.favorites[0];
-    console.log('reminders', reminders.id);
+    console.log('reminders', reminders);
 
     let reminderDivs = reminders.recipe.ingredients.map(reminder => {
       return (
@@ -81,9 +81,10 @@ class AppList extends Component {
         <div className="title" id="listSignIn" style={{fontSize: "25px"}}>
           Ingredients List!
           {/*<div style={{ fontSize: "18px", left: "38%"}} id="list"><Link style={{color: "#9A3014"}} to="/">Home</Link></div>*/}
-          {/*<div style={{ fontSize: "18px", left: "38%"}} id="list"><a style={{color: "#9A3014"}} href="https://www.google.com/maps/search/grocery+store+near+me" target="_blank">Store</a></div>*/}
+          <div style={{ fontSize: "18px", left: "38%"}} id="list"><a style={{color: "#9A3014"}} href="https://www.google.com/maps/search/grocery+store+near+me" target="_blank">Store</a></div>
           <div style={{fontSize: "18px", left: "38%"}} id="list"><a style={{color: "#9A3014"}}
-                                                                    href="https://www.google.com/maps/search/food+trailer+near+me">Just give me a Taco!</a></div>
+                                                                    href="https://www.google.com/maps/search/food+trailer+near+me"
+                                                                    target="_blank">Just give me a Taco!</a></div>
 
         </div>
         {/*<div className="form-inline reminder-form">*/}
@@ -124,5 +125,6 @@ function mapStateToProps(state) {
     reminders: state
   }
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppList);
