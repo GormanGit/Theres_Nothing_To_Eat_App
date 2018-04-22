@@ -1,4 +1,4 @@
-import { ADD_REMINDER, DELETE_REMINDER, ADD_NUMBER } from '../actions';
+import {ADD_REMINDER, DELETE_REMINDER, ADD_NUMBER} from '../actions';
 
 
 const reminder = (action) => {
@@ -7,19 +7,18 @@ const reminder = (action) => {
     id: Math.random(),
     num: action.num
   }
-}
+};
 
-const removeById = (state=[], id) => {
+const removeById = (state = [], id) => {
   // check to see if the array is not equal to the id. giving an array of objects not equal to the id we specified
   const reminders = state.filter(reminder => reminder.id !== id);
   console.log('new reduced reminders', reminders);
   return reminders;
 }
 
-
-const reminders = (state = [], action ) => {
+const reminders = (state = [], action) => {
   let reminders = [...state];
-  switch(action.type) {
+  switch (action.type) {
     case ADD_REMINDER:
       reminders = [...state, reminder(action)]
       console.log('reminders and state', reminders)

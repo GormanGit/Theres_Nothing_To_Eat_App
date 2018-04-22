@@ -1,6 +1,6 @@
-import { ADD_INGREDIENT} from "../actions";
+import {ADD_INGREDIENT} from "../actions";
 
- function addIngredient(state = [], action) {
+function addIngredient(state = [], action) {
   switch (action.type) {
     case ADD_INGREDIENT:
       console.log("new Ingredients", action.items);
@@ -8,6 +8,6 @@ import { ADD_INGREDIENT} from "../actions";
     default:
       return state;
   }
-
 }
+
 export default addIngredient;

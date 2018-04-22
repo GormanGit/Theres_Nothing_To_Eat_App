@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, NavItem, Button, MenuItem, NavDropdown } from "react-bootstrap";
+import React from 'react';
+import {Navbar, Nav, NavItem} from "react-bootstrap";
 import "../App.css";
-import { Popover, OverlayTrigger } from "react-bootstrap"
+import {Popover, OverlayTrigger} from "react-bootstrap"
 // import { Link } from "react-router-dom"
-
-
 
 
 const topNavBar = () => {
@@ -12,7 +10,8 @@ const topNavBar = () => {
     <Popover id="popover-positioned-bottom" title="Using this app">
       <strong>Step 1.)</strong> Put ingredients in the search box separated by a comma.
       <br/>
-      <i><strong>Hint..</strong> Ideally, ingredients listed should be something that has been lingering in the cupboard for a long time.</i>
+      <i><strong>Hint..</strong> Ideally, ingredients listed should be something that has been lingering in the cupboard
+        for a long time.</i>
       <br/>
       <strong>Step 2.)</strong> Select a Diet and Cuisine if you have something in mind.
       <br/>
@@ -28,38 +27,35 @@ const topNavBar = () => {
 
     </Popover>
   );
-  return(
+  return (
     <div>
-      <Navbar className="navBar" style={{borderBottomColor: "#9A3014", borderRightColor: "#9A3014", borderLeftColor: "#9A3014",backgroundColor: "#C6CBCC", width: "100%"}} collapseOnSelect>
+      <Navbar className="navBar" style={{
+        borderBottomColor: "#9A3014",
+        borderRightColor: "#9A3014",
+        borderLeftColor: "#9A3014",
+        backgroundColor: "#C6CBCC",
+        width: "100%"
+      }} collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-
             {/*<a className="fab fa-github" style={{size: "4x"}}></a>*/}
-
           </Navbar.Brand>
-          <Navbar.Toggle />
+          <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="/search">
-              <a style={{color: "#777777"}} >Home</a>
+            <NavItem eventKey={1} href="/search" style={{color: "#777777"}}> Home
+              {/*<a style={{color: "#777777"}}> Home </a>*/}
             </NavItem>
             <NavItem eventKey={2} href="#">
               About
             </NavItem>
-            {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">*/}
-              {/*<MenuItem eventKey={3.1}>Action</MenuItem>*/}
-              {/*<MenuItem eventKey={3.2}>Another action</MenuItem>*/}
-              {/*<MenuItem eventKey={3.3}>Something else here</MenuItem>*/}
-              {/*<MenuItem divider />*/}
-              {/*<MenuItem eventKey={3.3}>Separated link</MenuItem>*/}
-            {/*</NavDropdown>*/}
           </Nav>
           <Nav pullRight>
             <OverlayTrigger eventKey={1} trigger="click" placement="bottom" href="" overlay={popoverBottom}>
               <NavItem>Instructions</NavItem>
             </OverlayTrigger>
-            <NavItem >
+            <NavItem>
             </NavItem>
           </Nav>
         </Navbar.Collapse>
@@ -67,4 +63,4 @@ const topNavBar = () => {
     </div>
   )
 }
-  export default topNavBar;
+export default topNavBar;

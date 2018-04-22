@@ -1,43 +1,44 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 // const urlComponent = "https://lh3.googleusercontent.com/";
-import { addToFavorite, removeFromFavorite } from "../actions";
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom';
+import {addToFavorite, removeFromFavorite} from "../actions";
+import {connect} from 'react-redux'
 
 class RecipeItems extends Component {
   //create the constructor in order to have the favorites button
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
       favorited: false
     };
   }
-  addToFavorite(){
+
+  addToFavorite() {
     this.setState({favorited: !this.state.favorited});
     this.props.addToFavorite(this.props.recipes);
   }
 
-  removeFromFavorite(){
+  removeFromFavorite() {
     this.setState({favorited: !this.state.favorited});
     this.props.removeFromFavorite(this.props.recipes)
   }
 
-  displayFav(){
-    if(!this.state.favorited){
+  displayFav() {
+    if (!this.state.favorited) {
       return <span className="glyphicon glyphicon-unchecked"
-                   onClick={()=>this.addToFavorite()}
+                   onClick={() => this.addToFavorite()}
       ></span>
-    } else{
+    } else {
       return <span className="glyphicon glyphicon-check"
-                   onClick={()=>this.removeFromFavorite()}
+                   onClick={() => this.removeFromFavorite()}
         // onClick={()=>this.setState({favorited: !this.state.favorited})}
       ></span>
     }
   }
+
   render() {
     console.log(this.props);
-    return(
+    return (
 
       <div id="boxShade" style={{marginTop: "20px"}} className="col-md-12 col-md-4">
         <div className="thumbnail">
@@ -57,4 +58,4 @@ class RecipeItems extends Component {
 }
 
 //all that is needed here is a function so the first parameter will be null as state properties is not needed
-export default connect(null, { addToFavorite, removeFromFavorite })(RecipeItems);
+export default connect(null, {addToFavorite, removeFromFavorite})(RecipeItems);
