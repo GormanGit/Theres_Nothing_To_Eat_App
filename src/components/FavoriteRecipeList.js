@@ -15,15 +15,19 @@ class FavoriteRecipeList extends Component {
         <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
 
         <h4 id="listSignIn">My Latest Recipes</h4>
+
+        <li style={{display: "flex", justifyContent: "center", marginRight: "0%", fontSize: "18px"}} id="list"><Link
+          style={{color: "#9A3014"}} to="/">Home</Link></li>
+
+        <li style={{display: "flex", justifyContent: "center", marginRight: "0%", fontSize: "18px"}} id="list"><Link
+          style={{color: "#9A3014"}} to="/AppList">Shopping List</Link></li>
+        <br/>
+
         {this.props.favorites.map(recipes => {
           return <RecipeItems style={{position: "fixed"}} recipes={recipes} key={recipes.recipe.image}
                               showButton={false}/>
         })}
-        <li style={{display: "flex", justifyContent: "center", marginRight: "32%", fontSize: "18px"}} id="list"><Link
-          style={{color: "#9A3014"}} to="/">Home</Link></li>
 
-        <li style={{display: "flex", justifyContent: "center", marginRight: "32%", fontSize: "18px"}} id="list"><Link
-          style={{color: "#9A3014"}} to="/AppList">Shopping List</Link></li>
 
       </div>
 

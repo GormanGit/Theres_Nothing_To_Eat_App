@@ -63,7 +63,17 @@ class AppList extends Component {
     });
     console.log(reminderDivs);
     return (
-      <ul id="listSignIn" style={{left: "34%", width: "300", text: "1em", color: "black", fontSize: "18"}}
+      <ul id="listSignIn" style={{
+        left: "34%",
+        // display: "flex",
+        // flexDirection: "column",
+        // justifyContent: "center",
+        verticalAlign: "middle",
+
+        width: "300",
+        text: "1em",
+        color: "black",
+        fontSize: "18"}}
           className="list-group col-sm-4">
         {reminderDivs}
 

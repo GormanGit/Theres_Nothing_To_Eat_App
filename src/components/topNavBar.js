@@ -24,7 +24,11 @@ const topNavBar = () => {
       <strong>Step 6.)</strong> When your ready to start cooking click the "Recipe" link for preparation instructions.
       <br/>
       <strong>Step 7.)</strong> Enjoy!
-
+    </Popover>
+  );
+  const popoverContact = (
+    <Popover id="contact" title="">
+      <strong>contact@jongorman.top</strong>
     </Popover>
   );
   return (
@@ -45,15 +49,17 @@ const topNavBar = () => {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem  id="listSignIn" href="/search"> Home
+            <NavItem  id="listSignIn"  href="/search"> Home
               {/*<a style={{color: "#777777"}}> Home </a>*/}
             </NavItem>
-            <NavItem id="listSignIn">
-              About
+            <OverlayTrigger trigger="hover" href="" placement="bottom" overlay={popoverContact}>
+            <NavItem id="listSignIn" >
+              Contact
             </NavItem>
+            </OverlayTrigger>
           </Nav>
           <Nav pullRight>
-            <OverlayTrigger eventKey={1} trigger="click" placement="bottom" href="" overlay={popoverBottom}>
+            <OverlayTrigger eventKey={1} trigger="hover" placement="bottom" href="" overlay={popoverBottom}>
               <NavItem id="listSignIn"> Instructions</NavItem>
             </OverlayTrigger>
             <NavItem>
