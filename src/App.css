@@ -45,6 +45,9 @@
     /*-webkit-background-size: cover;*/
     /*background-size: 50%;*/
 }
+.list-group{
+    left: 34%;
+}
 
 #list {
     list-style-type: none;
@@ -107,4 +110,12 @@
     /*background-color: red;*/
     /*color: white;*/
     text-align: center;
+}
+@media only screen and (max-device-width: 450px){
+    #phone {
+        font-family: 'Playfair Display', serif;
+        color: orange ;
+        left: 2%;
+
+    }
 }
