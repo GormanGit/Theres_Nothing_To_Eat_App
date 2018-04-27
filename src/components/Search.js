@@ -82,6 +82,7 @@ class Search extends Component {
           <FormGroup>
             {' '}
             <FormControl
+              className="phoneSearch"
               id="listSignIn"
               style={{color: "black"}}
               type="text"
@@ -89,7 +90,7 @@ class Search extends Component {
               onChange={(event) => this.setState({query: event.target.value + this.state.buttons})}
             />
             {' '}
-            <Button id="searchButton" className="glyphicon glyphicon-cutlery" bsStyle="success"
+            <Button  id="searchButton" className="glyphicon glyphicon-cutlery" bsStyle="success"
                     onClick={() => this.search()}></Button>
           </FormGroup>
         </Form>

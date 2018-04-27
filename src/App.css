@@ -121,4 +121,11 @@
         padding-right: 20px;
         padding-left: 20px;
     }
+    .phoneSearch{
+        text-align: center;
+        margin-left: 25%;
+        width: 50%;
+    }
+    .cooking{}
+    margin-top: 0px;
 }
