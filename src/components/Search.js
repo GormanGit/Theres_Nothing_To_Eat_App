@@ -36,7 +36,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
+        <h1 className="phoneTitle" id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
 
         <Form inline className="col-md-6 col-md-offset-3">
           <DropdownButton id="dropMenu" title="Diet" className="buttonColor"

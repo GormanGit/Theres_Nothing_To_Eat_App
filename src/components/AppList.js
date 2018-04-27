@@ -86,7 +86,7 @@ class AppList extends Component {
     // console.log('this.props', this.props);
     return (
       <div className="App">
-        <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
+        <h1 className="phoneTitle" id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
 
         <div className="title" id="listSignIn" style={{fontSize: "25px"}}>
           Ingredients List!

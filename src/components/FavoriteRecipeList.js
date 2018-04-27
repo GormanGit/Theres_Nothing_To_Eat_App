@@ -12,7 +12,7 @@ class FavoriteRecipeList extends Component {
 
       //map over the favorites and render the RecipeItems that are returned in a seperate div
       <div>
-        <h1 id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
+        <h1 className="phoneTitle" id="signUpSignIn" style={{fontSize: "33pt"}}>There's Nothing to Eat!</h1>
 
         <h4 id="listSignIn">My Latest Recipes</h4>
 

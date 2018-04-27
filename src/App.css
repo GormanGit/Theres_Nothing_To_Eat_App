@@ -116,6 +116,9 @@
         font-family: 'Playfair Display', serif;
         color: orange ;
         left: 2%;
-
+    }
+    .phoneTitle{
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }

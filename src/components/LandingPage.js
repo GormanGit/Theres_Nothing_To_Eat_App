@@ -12,7 +12,7 @@ const LandingPage = () => {
         <br/>
         To
       </h2>
-      <h1 id="signUpSignIn" style={{color: "black"}}>
+      <h1 className="phoneTitle" id="signUpSignIn" style={{color: "black"}}>
         There's Nothing to Eat &copy;
       </h1>
       <div className="container" style={{display: "flex", justifyContent: "center", width: "50%", height: "50%"}}>
