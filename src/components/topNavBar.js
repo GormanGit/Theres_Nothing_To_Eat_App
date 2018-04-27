@@ -13,7 +13,7 @@ const topNavBar = () => {
       <i><strong>Hint..</strong> Ideally, ingredients listed should be something that has been lingering in the cupboard
         for a long time.</i>
       <br/>
-      <strong>Step 2.)</strong> Select a Diet and Cuisine if you have something in mind.
+      <strong>Step 2.)</strong> Select a Diet and Cuisine if you have something in mind. Then click the Search button.
       <br/>
       <strong>Step 3.)</strong> Click the check box of the recipe you like.
       <br/>

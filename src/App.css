@@ -126,6 +126,8 @@
         margin-left: 25%;
         width: 50%;
     }
-    .cooking{}
-    margin-top: 0px;
+    .cooking{
+    margin-top: -10px;
+    }
+
 }
