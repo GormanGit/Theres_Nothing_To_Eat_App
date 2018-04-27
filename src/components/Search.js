@@ -42,41 +42,61 @@ class Search extends Component {
           <DropdownButton id="dropMenu" title="Diet" className="buttonColor"
           >
             <MenuItem id="listSignIn" styele={{color: "black"}}
-                      onClick={() => this.state.buttons.push(", low-carb")}>Low-Carb</MenuItem>
+                      onClick={() => this.state.buttons.push(", diabetic")}>Diabetic</MenuItem>
             <MenuItem id="listSignIn" styele={{color: "black"}}
-                      onClick={() => this.state.buttons.push(", Sea-Food")}>Sea-Food</MenuItem>
+                      onClick={() => this.state.buttons.push(", gluten Free")}>Gluten-Free</MenuItem>
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push(", Keto")}>Ketogentic</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
-                      onClick={() => this.state.buttons.push(", Vegetarian")}>Vegetarian</MenuItem>
+                      onClick={() => this.state.buttons.push(", low-carb")}>Low-Carb</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
-                      onClick={() => this.state.buttons.push(", Vegan")}>Vegan</MenuItem>
+                      onClick={() => this.state.buttons.push(", paleo")}>Paleo</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push(", Raw")}>Raw</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
-                      onClick={() => this.state.buttons.push(", Paleo")}>Paleo</MenuItem>
+                      onClick={() => this.state.buttons.push(", sea-Food")}>Sea-Food</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
-                      onClick={() => this.state.buttons.push(", diabetic")}>Diabetic</MenuItem>
+                      onClick={() => this.state.buttons.push(", smoothy")}>Smoothy</MenuItem>
+
+            <MenuItem id="listSignIn" styele={{color: "black"}}
+                      onClick={() => this.state.buttons.push(", Vegan")}>Vegan</MenuItem>
+
+            <MenuItem id="listSignIn" styele={{color: "black"}}
+                      onClick={() => this.state.buttons.push(", Vegetarian")}>Vegetarian</MenuItem>
+
           </DropdownButton>
           {' '}
           <DropdownButton id="dropMenu" title="Cuisine" className="buttonColor"
           >
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ African")}>African</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ American")}>American</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ Asian")}>Asian</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ French")}>French</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ Indian")}>Indian</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ Italian")}>Italian</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ Mexican")}>Mexican</MenuItem>
+
             <MenuItem id="listSignIn" styele={{color: "black"}}
                       onClick={() => this.state.buttons.push("+ Middle Eastern")}>Middle Eastern</MenuItem>
+
           </DropdownButton>
           {' '}
           <FormGroup>

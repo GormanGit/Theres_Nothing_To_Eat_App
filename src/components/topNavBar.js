@@ -49,7 +49,7 @@ const topNavBar = () => {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem  id="listSignIn"  href="/search"> Home
+            <NavItem  id="listSignIn"  href="/"> Home
               {/*<a style={{color: "#777777"}}> Home </a>*/}
             </NavItem>
             <OverlayTrigger trigger="hover" href="" placement="bottom" overlay={popoverContact}>
